@@ -1,3 +1,68 @@
-h1 {
-    background-color: yellow;
+body {
+    background-color: #D8DEE9;
+    color: #2E3440;
+}
+
+.topnav {
+    background-color: #434C5E;
+    /* height: 100px; */
+}
+
+.topnav a {
+    display: inline-block;
+    color: #D8DEE9;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.topnav a:hover {
+    color: #434C5E;
+    background-color: #D8DEE9;
+}
+
+.topnav a.active {
+    color: #434C5E;
+    background-color: #A3BE8C;
+}
+
+.judul {
+    color: #434C5E;
+    text-align: center;
+}
+
+.container {
+    margin-top: 15px;
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.card {
+    background-color: #3B4252;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+}
+
+.text-white {
+    color: #D8DEE9;
+}
+
+.desc {
+    align-items: center;
+    display: flex;
+}
+
+.cover {
+    width: 100px;
+    height: 100px;
+    margin: 20px 20px;
+}
+
+table {
+    margin-right: 20px;
 }
