@@ -1,6 +1,7 @@
 body {
     background-color: #D8DEE9;
     color: #2E3440;
+    margin: 50px;
 }
 
 .topnav {
@@ -37,6 +38,7 @@ body {
     display: flex;
     padding: 20px;
     flex-wrap: wrap;
+    justify-content: space-evenly;
     gap: 50px;
 }
 
