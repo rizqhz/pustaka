@@ -9,220 +9,33 @@
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
   <link rel="manifest" href="assets/favicons/site.webmanifest">
   <link rel="stylesheet" href="style/main.css">
+  <script src="script/jquery-3.6.4.js"></script>
   <title>E - Katalog Buku</title>
 </head>
-<body>
+<body onload="listProduct()">
   <section class="topnav">
     <a href="view/login.html">Login</a>
     <a href="#" class="active">Katalog</a>
   </section>
   <h1 class="judul">Daftar Katalog Buku</h1>
   <hr>
-  <section class="container">
-    <div class="card">
-      <h1 class="text-white">Buku</h1>
-      <div class="desc">
-        <img class="cover" src="assets/images/book-flat.png" alt="example">
-        <p class="text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, rem ipsam!</p>
-      </div>
-      <h3 class="text-white">Rp99.999.999,00-</h3>
-    </div>
-    <div class="card">
-      <h1 class="text-white">Buku</h1>
-      <div class="desc">
-        <img class="cover" src="assets/images/book-flat.png" alt="example">
-        <p class="text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, rem ipsam!</p>
-      </div>
-      <h3 class="text-white">Rp99.999.999,00-</h3>
-    </div>
-    <div class="card">
-      <h1 class="text-white">Buku</h1>
-      <div class="desc">
-        <img class="cover" src="assets/images/book-flat.png" alt="example">
-        <p class="text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, rem ipsam!</p>
-      </div>
-      <h3 class="text-white">Rp99.999.999,00-</h3>
-    </div>
-    <div class="card">
-      <h1 class="text-white">Buku</h1>
-      <div class="desc">
-        <img class="cover" src="assets/images/book-flat.png" alt="example">
-        <p class="text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, rem ipsam!</p>
-      </div>
-      <h3 class="text-white">Rp99.999.999,00-</h3>
-    </div>
-    <div class="card">
-      <h1 class="text-white">Buku</h1>
-      <div class="desc">
-        <img class="cover" src="assets/images/book-flat.png" alt="example">
-        <p class="text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, rem ipsam!</p>
-      </div>
-      <h3 class="text-white">Rp99.999.999,00-</h3>
-    </div>
-    <div class="card">
-      <h1 class="text-white">Buku</h1>
-      <div class="desc">
-        <img class="cover" src="assets/images/book-flat.png" alt="example">
-        <p class="text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, rem ipsam!</p>
-      </div>
-      <h3 class="text-white">Rp99.999.999,00-</h3>
-    </div>
-    <div class="card">
-      <h1 class="text-white">Buku</h1>
-      <div class="desc">
-        <img class="cover" src="assets/images/book-flat.png" alt="example">
-        <p class="text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, rem ipsam!</p>
-      </div>
-      <h3 class="text-white">Rp99.999.999,00-</h3>
-    </div>
-    <div class="card">
-      <h1 class="text-white">Buku</h1>
-      <div class="desc">
-        <img class="cover" src="assets/images/book-flat.png" alt="example">
-        <p class="text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, rem ipsam!</p>
-      </div>
-      <h3 class="text-white">Rp99.999.999,00-</h3>
-    </div>
-  </section>
-  <h1 class="judul">Buku Matematika</h1>
-  <hr>
-  <section class="container">
-    <div class="card">
-      <h1 class="text-white">Buku</h1>
-      <div class="desc">
-        <img class="cover" src="assets/images/book-flat.png" alt="example">
-        <p class="text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, rem ipsam!</p>
-      </div>
-      <h3 class="text-white">Rp99.999.999,00-</h3>
-    </div>
-    <div class="card">
-      <h1 class="text-white">Buku</h1>
-      <div class="desc">
-        <img class="cover" src="assets/images/book-flat.png" alt="example">
-        <p class="text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, rem ipsam!</p>
-      </div>
-      <h3 class="text-white">Rp99.999.999,00-</h3>
-    </div>
-    <div class="card">
-      <h1 class="text-white">Buku</h1>
-      <div class="desc">
-        <img class="cover" src="assets/images/book-flat.png" alt="example">
-        <p class="text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, rem ipsam!</p>
-      </div>
-      <h3 class="text-white">Rp99.999.999,00-</h3>
-    </div>
-    <div class="card">
-      <h1 class="text-white">Buku</h1>
-      <div class="desc">
-        <img class="cover" src="assets/images/book-flat.png" alt="example">
-        <p class="text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, rem ipsam!</p>
-      </div>
-      <h3 class="text-white">Rp99.999.999,00-</h3>
-    </div>
-    <div class="card">
-      <h1 class="text-white">Buku</h1>
-      <div class="desc">
-        <img class="cover" src="assets/images/book-flat.png" alt="example">
-        <p class="text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, rem ipsam!</p>
-      </div>
-      <h3 class="text-white">Rp99.999.999,00-</h3>
-    </div>
-    <div class="card">
-      <h1 class="text-white">Buku</h1>
-      <div class="desc">
-        <img class="cover" src="assets/images/book-flat.png" alt="example">
-        <p class="text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, rem ipsam!</p>
-      </div>
-      <h3 class="text-white">Rp99.999.999,00-</h3>
-    </div>
-    <div class="card">
-      <h1 class="text-white">Buku</h1>
-      <div class="desc">
-        <img class="cover" src="assets/images/book-flat.png" alt="example">
-        <p class="text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, rem ipsam!</p>
-      </div>
-      <h3 class="text-white">Rp99.999.999,00-</h3>
-    </div>
-    <div class="card">
-      <h1 class="text-white">Buku</h1>
-      <div class="desc">
-        <img class="cover" src="assets/images/book-flat.png" alt="example">
-        <p class="text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, rem ipsam!</p>
-      </div>
-      <h3 class="text-white">Rp99.999.999,00-</h3>
-    </div>
-  </section>
-  <h1 class="judul">Buku Filsafat</h1>
-  <hr>
-  <section class="container">
-    <div class="card">
-      <h1 class="text-white">Buku</h1>
-      <div class="desc">
-        <img class="cover" src="assets/images/book-flat.png" alt="example">
-        <p class="text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, rem ipsam!</p>
-      </div>
-      <h3 class="text-white">Rp99.999.999,00-</h3>
-    </div>
-    <div class="card">
-      <h1 class="text-white">Buku</h1>
-      <div class="desc">
-        <img class="cover" src="assets/images/book-flat.png" alt="example">
-        <p class="text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, rem ipsam!</p>
-      </div>
-      <h3 class="text-white">Rp99.999.999,00-</h3>
-    </div>
-    <div class="card">
-      <h1 class="text-white">Buku</h1>
-      <div class="desc">
-        <img class="cover" src="assets/images/book-flat.png" alt="example">
-        <p class="text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, rem ipsam!</p>
-      </div>
-      <h3 class="text-white">Rp99.999.999,00-</h3>
-    </div>
-    <div class="card">
-      <h1 class="text-white">Buku</h1>
-      <div class="desc">
-        <img class="cover" src="assets/images/book-flat.png" alt="example">
-        <p class="text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, rem ipsam!</p>
-      </div>
-      <h3 class="text-white">Rp99.999.999,00-</h3>
-    </div>
-    <div class="card">
-      <h1 class="text-white">Buku</h1>
-      <div class="desc">
-        <img class="cover" src="assets/images/book-flat.png" alt="example">
-        <p class="text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, rem ipsam!</p>
-      </div>
-      <h3 class="text-white">Rp99.999.999,00-</h3>
-    </div>
-    <div class="card">
-      <h1 class="text-white">Buku</h1>
-      <div class="desc">
-        <img class="cover" src="assets/images/book-flat.png" alt="example">
-        <p class="text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, rem ipsam!</p>
-      </div>
-      <h3 class="text-white">Rp99.999.999,00-</h3>
-    </div>
-    <div class="card">
-      <h1 class="text-white">Buku</h1>
-      <div class="desc">
-        <img class="cover" src="assets/images/book-flat.png" alt="example">
-        <p class="text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, rem ipsam!</p>
-      </div>
-      <h3 class="text-white">Rp99.999.999,00-</h3>
-    </div>
-    <div class="card">
-      <h1 class="text-white">Buku</h1>
-      <div class="desc">
-        <img class="cover" src="assets/images/book-flat.png" alt="example">
-        <p class="text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, rem ipsam!</p>
-      </div>
-      <h3 class="text-white">Rp99.999.999,00-</h3>
-    </div>
+  <section id="book-container" class="container"></section>
+  <section class="loading-spinner"></section>
+  <section class="btn-group" align="center">
+    <button onclick="add()" id="show-more" class="btn-show-more"
+            style="
+              background-color: #2E3440;
+              color: #D8DEE9;
+              padding: 20px;
+              font-size: 14pt;
+              font-family: 'Times New Roman', Times, serif;
+              /* border: 1px solid #D8DEE9; */
+            "
+    >Show More</button>
   </section>
   <hr>
   <footer>
-    <p>&copy; Copyright Rizqi Ghozali 2023</p>
+    <p style="color: #D8DEE9;">&copy; Copyright Rizqi Ghozali 2023</p>
   </footer>
   <script src="script/main.js"></script>
 </body>
