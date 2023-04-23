@@ -1,0 +1,43 @@
+/* polar night scheme */
+.bg-night-0 { background-color: #242933; }
+.fg-night-0 { color: #242933; }
+.bg-night-1 { background-color: #2E3440; }
+.fg-night-1 { color: #2E3440; }
+.bg-night-2 { background-color: #3B4252; }
+.fg-night-2 { color: #3B4252; }
+.bg-night-3 { background-color: #434C5E; }
+.fg-night-3 { color: #434C5E; }
+.bg-night-4 { background-color: #4C566A; }
+.fg-night-4 { color: #4C566A; }
+
+/* snow storm scheme */
+.bg-snow-0 { background-color: #ffffff; }
+.fg-snow-0 { color: #ffffff; }
+.bg-snow-1 { background-color: #D8DEE9; }
+.fg-snow-1 { color: #D8DEE9; }
+.bg-snow-2 { background-color: #E5E9F0; }
+.fg-snow-2 { color: #E5E9F0; }
+.bg-snow-3 { background-color: #ECEFF4; }
+.fg-snow-3 { color: #ECEFF4; }
+
+/* frost scheme */
+.bg-frost-1 { background-color: #5E81AC; }
+.fg-frost-1 { color: #5E81AC; }
+.bg-frost-2 { background-color: #81A1C1; }
+.fg-frost-2 { color: #81A1C1; }
+.bg-frost-3 { background-color: #88C0D0; }
+.fg-frost-3 { color: #88C0D0; }
+.bg-frost-4 { background-color: #8FBCBB; }
+.fg-frost-4 { color: #8FBCBB; }
+
+/* aurora scheme */
+.bg-aurora-red { background-color: #BF616A; }
+.fg-aurora-red { color: #BF616A; }
+.bg-aurora-orange { background-color: #D08770; }
+.fg-aurora-orange { color: #D08770; }
+.bg-aurora-yellow { background-color: #EBCB8B; }
+.fg-aurora-yellow { color: #EBCB8B; }
+.bg-aurora-green { background-color: #A3BE8C; }
+.fg-aurora-green { color: #A3BE8C; }
+.bg-aurora-magenta { background-color: #B48EAD; }
+.fg-aurora-magenta { color: #B48EAD; }

@@ -1,70 +1,103 @@
-body {
-    background-color: #2E3440;
-    color: #2E3440;
-    margin: 50px;
-}
+@import "base.css";
+@import "color.css";
+@import "components/nevigation.css";
+@import "components/card.css";
+@import "components/button.css";
 
-.topnav {
-    background-color: #434C5E;
-    /* height: 100px; */
-}
-
-.topnav a {
+.title {
     display: inline-block;
-    color: #D8DEE9;
-    text-decoration: none;
-    text-align: center;
-    font-size: 20px;
-    padding: 10px;
-}
-
-.topnav a:hover {
-    color: #434C5E;
-    background-color: #D8DEE9;
-}
-
-.topnav a.active {
-    color: #434C5E;
-    background-color: #A3BE8C;
-}
-
-.judul {
-    color: #ECEFF4;
+    padding: 80px 0;
+    width: 100%;
+    font-size: 19pt;
     text-align: center;
 }
 
-.container {
-    margin-top: 15px;
+.menubar {
     display: flex;
-    padding: 20px;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding: 15px 15px;
+    font-size: 15pt;
+    font-weight: bold;
+}
+
+.menu-link, .menu-op {
+    display: flex;
+}
+
+.menu, button {
+    font-weight: bold;
+    padding: 15px;
+}
+
+.menu-link > .menu {
+    margin-right: 15px;
+}
+
+.menu-op > .menu {
+    margin-left: 15px;
+}
+
+.menu.active:hover {
+    background-color: #2E3440;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
     gap: 50px;
+    flex-wrap: wrap;
 }
 
-.card {
-    background-color: #3B4252;
-    padding: 10px;
-    border-radius: 10px;
-    text-align: center;
-    width: 300px;
+main > div.card {
+    display: inline-flex;
+    width: 550px;
+    height: 275px;
+    border-right: 5px solid #D8DEE9;
+    border-bottom: 5px solid #D8DEE9;
+    border-radius: 20px;
 }
 
-.text-white {
-    color: #D8DEE9;
-}
-
-.desc {
+.book-cover {
+    display: inline-flex;
+    justify-content: center;
     align-items: center;
-    display: flex;
+    box-sizing: border-box;
+    margin: 0;
+    width: 35%;
+    height: 100%;
+    border-right: 3px solid #D8DEE9;
 }
 
-.cover {
-    width: 100px;
-    height: 100px;
-    margin: 20px 20px;
+.book-cover > img {
+    width: 128px;
+    height: 128px;
 }
 
-table {
-    margin-right: 20px;
+.book-information {
+    display: inline-flex;
+    padding: 0 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 55%;
+    height: 100%;
+}
+
+.book-lang {
+    margin: 1em 0;
+}
+
+.book-desc {
+    text-indent: 1cm;
+    text-align: justify;
+}
+
+footer {
+    display: inline-block;
+    padding: 15px 0;
+    width: 100%;
+    font-size: 12pt;
+    font-weight: bold;
+    text-align: center;
 }

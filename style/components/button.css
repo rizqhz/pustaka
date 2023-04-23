@@ -1,0 +1,18 @@
+button, a {
+    padding: 0;
+    border: none;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.btn-view-item {
+    font-weight: bold;
+    background-color: #D8DEE9;
+    color: #2E3440;
+    border-left: 5px solid #3B4252;
+}
+
+.btn-view-item:hover {
+    background-color: #ECEFF4;
+    color: #4C566A;
+}
