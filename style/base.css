@@ -3,7 +3,12 @@ html {
     scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 html > body {
+    background-color: rgb(249, 249, 249);
     margin: 0;
 }
 
