@@ -13,33 +13,53 @@
   <script src="script/extern/jquery-3.6.4.js"></script>
   <title>E - Katalog</title>
 </head>
-<body onload="view(6)">
+<body onload="view(9)">
   <section class="title bg-snow-3 fg-night-4">
     <i class="fa fa-book-bookmark" style="display: block; margin: 0.83em; font-size: 30pt;"></i>
     <h1>K A T A L O G</h1>
     <h4>B U K U</h4>
   </section>
   <nav class="menubar bg-snow-1">
-    <div class="menu-link">
-      <a class="menu bg-night-4 fg-snow-3 active" href="">
+    <section class="menu-section-1">
+      <a class="menu-item bg-night-4 fg-snow-3 active" href="">
         <i class="fa fa-home"></i>
         <span>Home</span>
       </a>
-      <a class="menu fg-night-4" href="">Filsafat</a>
-      <a class="menu fg-night-4" href="">Matematika</a>
-      <a class="menu fg-night-4" href="">Bahasa</a>
-      <a class="menu fg-night-4" href="">Komputer</a>
-    </div>
-    <div class="menu-op">
-      <a class="menu bg-night-4 fg-snow-3 active" href="view/login.html">
+      <a class="menu-item fg-night-4" href="">
+        <i class="fa fa-book"></i>
+        <span>Filsafat</span>
+      </a>
+      <a class="menu-item fg-night-4" href="">
+        <i class="fa fa-book"></i>
+        <span>Matematika</span>
+      </a>
+      <a class="menu-item fg-night-4" href="">
+        <i class="fa fa-book"></i>
+        <span>Bahasa</span>
+      </a>
+      <a class="menu-item fg-night-4" href="">
+        <i class="fa fa-book"></i>
+        <span>Komputer</span>
+      </a>
+    </section>
+    <section class="menu-section-2">
+      <div class="search-field">
+        <form action="">
+          <button type="submit" class="btn-search bg-night-4 fg-snow-3 fa-1x">
+            <i class="fa fa-search"></i>
+          </button>
+          <input type="text" name="search" id="search" placeholder="Cari Judul Buku">
+        </form>
+      </div>
+      <a class="menu-item bg-night-4 fg-snow-3 active" id="login" href="view/login.html">
         <i class="fa fa-user-graduate"></i>
         <span>Login</span>
       </a>
-      <a class="menu bg-night-4 fg-snow-3 active" href="view/register.html">
+      <a class="menu-item bg-frost-3 fg-snow-3 active" id="register" href="view/register.html">
         <i class="fa fa-user-plus"></i>
         <span>Register</span>
       </a>
-    </div>
+    </section>
   </nav>
   <main></main>
   <section class="expand">
