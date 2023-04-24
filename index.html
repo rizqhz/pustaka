@@ -8,16 +8,16 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
   <link rel="manifest" href="assets/favicons/site.webmanifest">
-  <link rel="stylesheet" href="style/extern/fontawesome/css/all.css">
+  <link rel="stylesheet" href="style/extern/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="style/main.css">
   <script src="script/extern/jquery-3.6.4.js"></script>
-  <title>E - Katalog</title>
+  <title>Librarium Catalogia</title>
 </head>
 <body onload="view(9)">
   <section class="title bg-snow-3 fg-night-4">
     <i class="fa fa-book-bookmark" style="display: block; margin: 0.83em; font-size: 30pt;"></i>
-    <h1>K A T A L O G</h1>
-    <h4>B U K U</h4>
+    <h1 style="margin-bottom: 0px; font-family: consolas;">L I B R A R I U M</h1>
+    <h4 style="margin-top: 10px; font-family: consolas;">- C A T A L O G I A -</h4>
   </section>
   <nav class="menubar bg-snow-1">
     <section class="menu-section-1">
@@ -25,19 +25,19 @@
         <i class="fa fa-home"></i>
         <span>Home</span>
       </a>
-      <a class="menu-item fg-night-4" href="">
+      <a class="menu-item bg-snow-3 fg-night-4" href="">
         <i class="fa fa-book"></i>
         <span>Filsafat</span>
       </a>
-      <a class="menu-item fg-night-4" href="">
+      <a class="menu-item bg-snow-3 fg-night-4" href="">
         <i class="fa fa-book"></i>
         <span>Matematika</span>
       </a>
-      <a class="menu-item fg-night-4" href="">
+      <a class="menu-item bg-snow-3 fg-night-4" href="">
         <i class="fa fa-book"></i>
         <span>Bahasa</span>
       </a>
-      <a class="menu-item fg-night-4" href="">
+      <a class="menu-item bg-snow-3 fg-night-4" href="">
         <i class="fa fa-book"></i>
         <span>Komputer</span>
       </a>
@@ -65,12 +65,20 @@
   <section class="expand">
     <div class="spinner"></div>
     <button onclick="view(3)" id="more" class="btn-more fg-night-4 bg-snow-2">
-      <i class="fa fa-refresh"></i>
-      <span>More</span>
+      <i class="fa fa-spinner"></i>
+      <span>Show More</span>
     </button>
   </section>
-  <footer class="bg-snow-1 fg-night-3">
-    <p>&copy; Rizqi Ghozali 2023</p>
+  <footer class="bg-night-0 fg-snow-1">
+    <div class="fg-snow-1">
+      <i class="fa-regular fa-copyright"></i>
+    </div>
+    <div class="fg-snow-1">
+      <span class="name">Rizqi Ghozali</span>
+    </div>
+    <div>
+      <span class="year bg-night-1 fg-snow-1">2023</span>
+    </div>
   </footer>
   <script src="script/data.js"></script>
   <script src="script/main.js"></script>
