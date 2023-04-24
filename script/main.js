@@ -7,14 +7,22 @@ const parse = data => `
         <img src=${data.cover}>
       </div>
       <div class="book-information">
-        <h3 class="book-title fg-night-4">${data.title}</h3>
+        <div class="card-header">
+          <h3 class="book-title fg-night-4">
+            <i class="fa fa-book"></i>
+            <span>${data.title}</span>
+          </h3>
+          <button class="btn-like bg-frost-3 fg-snow-3">
+            <i class="fa fa-heart fa-1x"></i>
+          </button>
+        </div>
         <div class="book-lang">
-          <a class="menu bg-frost-3 fg-snow-3 active" href="">ID</a>
-          <a class="menu fg-night-4" href="">EN</a>
-          <a class="menu fg-night-4" href="">JP</a>
+          <a class="lang bg-frost-3 fg-snow-3 active" href="">ID</a>
+          <a class="lang fg-night-4" href="">EN</a>
+          <a class="lang fg-night-4" href="">JP</a>
         </div>
         <p class="book-desc fg-night-4">${data.desc}</p>
-        <h4 class="book-price fg-night-4">${data.price}</h4>
+        <h3 class="book-price fg-frost-3">${data.price}</h3>
       </div>
     </div>
 `;
@@ -37,61 +45,3 @@ const view = n => {
         main.style.marginTop = '50px';
     }, 1000);
 };
-
-// let counter = 0;
-
-// function listProduct() {
-//     const container = document.getElementById('book-container');
-//     let buffer = '';
-//     books.forEach((book) => {
-//         buffer += `
-//                 <div class="card">
-//                     <h1 class="text-white">${book.name}</h1>
-//                     <div class="desc">
-//                         <img class="cover" src=${book.img} alt="example">
-//                         <p class="text-white">${book.desc}</p>
-//                     </div>
-//                     <h3 class="text-white">${book.price}-</h3>
-//                 </div>
-//         `;
-//         counter++;
-//     });
-//     container.innerHTML = buffer;
-// }
-
-// function add() {
-//     const container = document.getElementById('book-container');
-//     const button = document.getElementById('show-more');
-//     const spinner = document.querySelector('.loading-spinner');
-//     button.style.display = 'none';
-//     spinner.style.display = 'block';
-//     let buffer = '';
-//     setTimeout(function () {
-//         for (let i = 0; i < 4; i++) {
-//             buffer += `
-//                     <div class="card">
-//                         <h1 class="text-white">${books[i].name}</h1>
-//                         <div class="desc">
-//                             <img class="cover" src=${books[i].img} alt="example">
-//                             <p class="text-white">${books[i].desc}</p>
-//                         </div>
-//                         <h3 class="text-white">${books[i].price}-</h3>
-//                     </div>
-//             `;
-//         }
-//         container.insertAdjacentHTML('beforeend', buffer);
-//         counter += 4;
-//         if (counter >= books.length) {
-//             button.style.display = 'none';
-//         } else {
-//             button.style.display = 'block';
-//         }
-//         spinner.style.display = 'none';
-//     }, 1000);
-// }
-
-// function load() {
-//     setTimeout(() => {
-        
-//     }, 1000);
-// }
