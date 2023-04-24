@@ -18,13 +18,15 @@
 
 .menu-section-1 > .menu-item {
     margin-right: 15px;
-    border-bottom: 5px solid #4C566A;
+    border-right: 5px solid #E5E9F0;
+    border-bottom: 5px solid #E5E9F0;
 }
 
 .menu-section-1 > .menu-item:hover {
     background-color: #88C0D0;
     color: #ECEFF4;
-    border-bottom: 5px solid #E5E9F0;
+    border-right: 5px solid #85b6c5;
+    border-bottom: 5px solid #85b6c5;
 }
 
 .menu-section-2 > .menu-item {
@@ -32,8 +34,8 @@
 }
 
 .menu-item.active {
-    border-right: 5px solid #434C5E;
-    border-bottom: 5px solid #434C5E;
+    border-right: 5px solid #3B4252;
+    border-bottom: 5px solid #3B4252;
 }
 
 .menu-item.active:hover, #register:hover {
@@ -56,7 +58,7 @@
     color: #4C566A;
     font-size: 15pt;
     font-weight: bold;
-    padding: 10px;
+    padding: 10px 20px;
     border: none;
     border-right: 5px solid #ECEFF4;
     border-bottom: 5px solid #ECEFF4;
@@ -67,7 +69,7 @@
 }
 
 .btn-search {
-    border-bottom: 5px solid #434C5E;
+    border-bottom: 5px solid #3B4252;
 }
 
 .btn-search:hover {

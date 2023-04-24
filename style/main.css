@@ -42,26 +42,36 @@ main {
 
 .btn-more {
     font-size: 15pt;
-    border-right: 5px solid #D8DEE9;
-    border-bottom: 5px solid #D8DEE9;
+    width: 200px;
+    height: 70px;
+    border-right: 7px solid #D8DEE9;
+    border-bottom: 7px solid #D8DEE9;
 }
 
 .btn-more:hover {
     background-color: #88C0D0;
     color: #ECEFF4;
-    border-right: 5px solid #85b6c5;
-    border-bottom: 5px solid #85b6c5;
+    border-right: 7px solid #85b6c5;
+    border-bottom: 7px solid #85b6c5;
 }
 
 footer {
     position: fixed;
     left: 0;
     bottom: 0;
-    display: inline-block;
-    padding: 15px 0;
-    border-top: 5px solid #ECEFF4;
+    display: flex;
+    justify-content: center;
+    padding: 25px 0;
+    gap: 5px;
+    border-top: 5px solid #4C566A;
     width: 100%;
-    font-size: 12pt;
+    font-size: 13pt;
     font-weight: bold;
     text-align: center;
+}
+
+.year {
+    margin: 0 2px;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
