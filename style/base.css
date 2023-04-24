@@ -24,3 +24,8 @@ i {
 span {
     padding-right: 5px;
 }
+
+::placeholder {
+    color: #4C566A;
+    opacity: 0.5;
+}

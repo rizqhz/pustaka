@@ -1,0 +1,68 @@
+.card {
+    display: inline-flex;
+    width: 550px;
+    height: 275px;
+    border-right: 8px solid #D8DEE9;
+    border-bottom: 8px solid #D8DEE9;
+    border-radius: 20px;
+}
+
+.card-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.book-cover {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    border-right: 3px solid #D8DEE9;
+}
+
+.book-cover > img {
+    width: 128px;
+    height: 128px;
+}
+
+.book-information {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 20px;
+    width: 58%;
+}
+
+.book-lang {
+    margin: 1em 0;
+}
+
+.btn-like {
+    font-weight: bold;
+    padding: 20px 10px;
+    border-radius: 0 0 10px 10px;
+    border-right: 5px solid #D8DEE9;
+    border-bottom: 5px solid #D8DEE9;
+}
+
+.lang {
+    font-weight: bold;
+    padding: 10px;
+}
+
+.lang.active {
+    border-right: 5px solid #D8DEE9;
+    border-bottom: 5px solid #D8DEE9;
+}
+
+.book-desc {
+    text-indent: 1cm;
+    text-align: justify;
+}
+
+.book-price {
+    text-shadow: 1px 1px #D8DEE9;
+}
