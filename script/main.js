@@ -32,6 +32,7 @@ const view = n => {
     const expand = document.querySelector('.expand');
     const spinner = expand.children[0];
     const more = expand.children[1];
+    const footer = document.querySelector('footer');
     spinner.style.display = 'inline-block';
     more.style.display = 'none';
     setTimeout(() => {
@@ -43,5 +44,6 @@ const view = n => {
         spinner.style.display = 'none';
         more.style.display = books[iterator] ? 'block' : 'none';
         main.style.marginTop = '50px';
+        footer.style.position = 'relative';
     }, 1000);
 };
