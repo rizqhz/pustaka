@@ -43,6 +43,7 @@ const view = n => {
         main.innerHTML = content;
         spinner.style.display = 'none';
         more.style.display = books[iterator] ? 'block' : 'none';
+        expand.style.margin = books[iterator] ? '50px' : '25px';
         main.style.marginTop = '50px';
         footer.style.position = 'relative';
     }, 1000);
