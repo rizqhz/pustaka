@@ -1,0 +1,37 @@
+.table {
+    font-size: 13pt;
+    color: #434C5E;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 20px;
+}
+
+thead > tr {
+    background-color: #D8DEE9;
+}
+
+tbody > tr:nth-child(odd) {
+    background-color: #ECEFF4;
+}
+
+td:nth-child(1) {
+    text-align: center;
+}
+
+.flex-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-action-update {
+    padding: 10px;
+}
+
+.btn-action-delete {
+    background-color: #BF616A;
+    padding: 10px;
+}

@@ -14,10 +14,15 @@
   <title>Librarium Catalogia</title>
 </head>
 <body onload="view(9)">
-  <section class="title bg-snow-3 fg-night-4">
+  <section class="title bg-snow-3 fg-night-4" style="padding: 15px 0;">
     <i class="fa fa-book-bookmark" style="display: block; margin: 0.83em; font-size: 30pt;"></i>
     <h1 style="margin-bottom: 0px; font-family: consolas;">L I B R A R I U M</h1>
     <h4 style="margin-top: 10px; font-family: consolas;">- C A T A L O G I A -</h4>
+    <a class="menu-item bg-night-4 fg-snow-3 active" href="view/CRUD/index.php"
+       style="position: absolute; right: 0; top: 0; margin: 15px; font-size: 15pt;">
+      <i class="fa fa-gear"></i>
+      <span>CRUD</span>
+    </a>
   </section>
   <nav class="menubar bg-snow-1">
     <section class="menu-section-1">
@@ -51,11 +56,11 @@
           <input type="text" name="search" id="search" placeholder="Cari Judul Buku">
         </form>
       </div>
-      <a class="menu-item bg-night-4 fg-snow-3 active" id="login" href="view/login.html">
+      <a class="menu-item bg-night-4 fg-snow-3 active" id="login" href="view/login.php">
         <i class="fa fa-user-graduate"></i>
         <span>Login</span>
       </a>
-      <a class="menu-item bg-frost-3 fg-snow-3 active" id="register" href="view/register.html">
+      <a class="menu-item bg-frost-3 fg-snow-3 active" id="register" href="view/register.php">
         <i class="fa fa-user-plus"></i>
         <span>Register</span>
       </a>

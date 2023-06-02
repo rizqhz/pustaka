@@ -1,0 +1,59 @@
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-form {
+    display: flex;
+    flex-direction: column;
+    background-color: #ECEFF4;
+    width: 50%;
+    border-right: 5px solid #E5E9F0;
+    border-bottom: 5px solid #E5E9F0;
+}
+
+.flex-form > div:nth-child(1) {
+    background-color: #D8DEE9;
+}
+
+#form-insert {
+    padding: 30px;
+}
+
+#form-title {
+    font-family: consolas;
+    color: #4C566A;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.form-label {
+    color: #4C566A;
+    font-size: 14pt;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+#form-insert > input:focus, textarea:focus {
+    outline: none;
+}
+
+#form-insert > input, textarea {
+    background-color: rgb(249, 249, 249);
+    color: #4C566A;
+    font-size: 14pt;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-right: 5px solid #E5E9F0;
+    border-bottom: 5px solid #E5E9F0;
+}
+
+textarea {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#btn-kembali, #btn-reset, #btn-simpan {
+    font-size: 14pt;
+}

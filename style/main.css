@@ -3,6 +3,8 @@
 @import "components/button.css";
 @import "components/nevigation.css";
 @import "components/card.css";
+@import "components/table.css";
+@import "components/form.css";
 
 .title {
     display: inline-block;
