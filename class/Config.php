@@ -6,7 +6,7 @@ class Config {
         'host' => 'localhost',
         'name' => 'makhluk',
         'user' => 'root',
-        'pass' => '0xRizghz060403-#1',
+        'pass' => '',
     ];
 
     public static $PAGE = [
