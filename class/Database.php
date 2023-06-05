@@ -1,15 +1,16 @@
 <?php
 
-require_once "Config.php";
+require_once 'Config.php';
 
 class Database {
 
     protected static $handler = null;
+
     protected static $query = null;
     protected static $table = null;
 
     public function __construct() {
-        [$host, $name, $user, $pass] = array_values(Config::$db);
+        [$host, $name, $user, $pass] = array_values(Config::$DB);
         self::$handler = new mysqli($host, $user, $pass, $name);
         if (self::$handler->connect_errno) {
             echo "<h2>Failed to connect to MySQL.</h2>";
@@ -99,14 +100,14 @@ class Database {
     }
 
     public function get() {
-        // echo self::$query;
         $res = self::$handler->query(self::$query);
         return $res->fetch_all(MYSQLI_ASSOC);
     }
 
     public function first() {
         self::$query .= " LIMIT 1";
-        return $this->get();
+        $res = self::$handler->query(self::$query);
+        return $res->fetch_assoc();
     }
 
     public function insert(array $data) {
@@ -118,7 +119,6 @@ class Database {
         }
         [$col, $val] = [substr($col, 2), substr($val, 2)];
         self::$query .= " ($col) VALUES ($val)";
-        // echo self::$query;
         $res = self::$handler->prepare(self::$query) or die('error');
         return $res->execute();
     }
@@ -132,14 +132,12 @@ class Database {
         $str = substr($str, 2);
         $pieces = explode('WHERE', self::$query);
         self::$query = $pieces[0]." SET $str WHERE ".$pieces[1];
-        // echo self::$query;
         $res = self::$handler->prepare(self::$query) or die('error');
         return $res->execute();
     }
 
     public function delete() {
         self::$query = str_replace('SELECT *', 'DELETE', self::$query);
-        // echo self::$query;
         $res = self::$handler->prepare(self::$query) or die('error');
         return $res->execute();
     }

@@ -1,10 +1,10 @@
 @import "base.css";
 @import "color.css";
-@import "components/button.css";
-@import "components/nevigation.css";
-@import "components/card.css";
-@import "components/table.css";
-@import "components/form.css";
+@import "button.css";
+@import "nevigation.css";
+@import "card.css";
+@import "table.css";
+@import "form.css";
 
 .title {
     display: inline-block;
