@@ -4,13 +4,11 @@ require_once 'Database.php';
 
 class Auth {
 
-    private static $db = null;
-
     public static function login(array $data) {
         unset($_POST['login']);
-        self::$db = new Database();
+        $db = new Database();
         [$user, $pass] = [$data['username'], $data['password']];
-        $result = self::$db->table('users')
+        $result = $db->table('users')
                            ->where('username', "'$user'")
                            ->first();
         if ($result) {
@@ -32,8 +30,16 @@ class Auth {
         }
     }
 
-    public static function register() {
-        self::$db = new Database();
+    public static function register(array $data) {
+        unset($data['register']);
+        $db = new Database();
+        $data['password'] = password_hash($data['password'], PASSWORD_BCRYPT);
+        $res = $db->table('users')->insert($data);
+        if ($res) {
+            header('location:auth.login.php');
+        } else {
+            echo "<script>alert('Gagal registrasi!')</script>";
+        }
     }
 
 }

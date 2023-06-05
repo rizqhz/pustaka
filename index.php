@@ -7,6 +7,15 @@
     <i class="fa fa-book-bookmark" style="display: block; margin: 0.83em; font-size: 30pt;"></i>
     <h1 style="margin-bottom: 0px; font-family: consolas;">L I B R A R I U M</h1>
     <h4 style="margin-top: 10px; font-family: consolas;">- C A T A L O G I A -</h4>
+    <?php if (Session::check()) { ?>
+    <form action="" method="post">
+      <button id="logout" class="menu-item bg-aurora-red fg-snow-3 active" type="submit" name="logout"
+         style="position: absolute; right: 0; top: 0; margin: 15px; font-size: 15pt;">
+        <i class="fa fa-person-running"></i>
+        <span>Logout</span>
+      </button>
+    </form>
+    <?php } ?>
   </section>
   <nav class="menubar bg-snow-1">
     <section class="menu-section-1">
@@ -41,7 +50,7 @@
         </form>
       </div>
       <?php if (Session::check()) { ?>
-      <a class="menu-item bg-night-4 fg-snow-3 active" id="login" href="">
+      <a class="menu-item bg-night-4 fg-snow-3 active" id="login" href="crud.index.php">
         <i class="fa fa-gear"></i>
         <span>CRUD</span>
       </a>
@@ -51,11 +60,11 @@
         <span><?= $info['name'] ?></span>
       </a>
       <?php } else { ?>
-      <a class="menu-item bg-night-4 fg-snow-3 active" id="login" href="login.php">
+      <a class="menu-item bg-night-4 fg-snow-3 active" id="login" href="auth.login.php">
         <i class="fa fa-user-graduate"></i>
         <span>Login</span>
       </a>
-      <a class="menu-item bg-frost-3 fg-snow-3 active" id="register" href="register.php">
+      <a class="menu-item bg-frost-3 fg-snow-3 active" id="register" href="auth.register.php">
         <i class="fa fa-user-plus"></i>
         <span>Register</span>
       </a>
@@ -73,3 +82,9 @@
   <?php require_once 'layouts/footer.php'; ?>
 </body>
 </html>
+
+<?php
+  if (isset($_POST['logout'])) {
+    Auth::logout();
+  }
+?>

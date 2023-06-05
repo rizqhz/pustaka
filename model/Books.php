@@ -1,7 +1,5 @@
 <?php
 
-require_once 'lib/Database.php';
-
 class Books {
     
     private static $db = null;
@@ -33,7 +31,7 @@ class Books {
         return self::$db->table('books')
                         ->select()
                         ->where('id', $id)
-                        ->get();
+                        ->first();
     }
 
     public function add(array $data) {
@@ -45,7 +43,7 @@ class Books {
             $image = $_FILES['sampul']['tmp_name'];
             $format = explode('/', $_FILES['sampul']['type'])[1];
             $filename = substr(hash('sha256', time()), 0, 10).date('dmy').".$format";
-            move_uploaded_file($image, "../../storage/$filename");
+            move_uploaded_file($image, "storage/$filename");
             $data['sampul'] = $filename;
         }
         $res = self::$db->table('books')
@@ -61,7 +59,7 @@ class Books {
         if (!empty($_FILES['sampul'])) {
             $image = $_FILES['sampul']['tmp_name'];
             $filename = $data['sampul'];
-            move_uploaded_file($image, "../../storage/$filename");
+            move_uploaded_file($image, "storage/$filename");
         }
         $res = self::$db->table('books')
                         ->where('id', $id)
@@ -70,6 +68,11 @@ class Books {
     }
 
     public function destroy(int $id) {
+        $data = self::$db->table('books')->select('sampul')
+                          ->where('id', $id)
+                          ->first();
+        $data = $data['sampul'];
+        unlink("storage/$data");
         $res = self::$db->table('books')
                         ->where('id', $id)
                         ->delete();

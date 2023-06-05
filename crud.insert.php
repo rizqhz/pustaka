@@ -1,31 +1,7 @@
-<?php
-
-require_once '../../models/Books.php';
-
-$books = new Books();
-
-$state = null;
-if (isset($_POST['submit'])) {
-  $state = $books->add($_POST);
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicons/favicon-16x16.png">
-  <link rel="manifest" href="../../assets/favicons/site.webmanifest">
-  <link rel="stylesheet" href="../../style/extern/fontawesome/css/all.min.css">
-  <link rel="stylesheet" href="../../style/main.css">
-  <script src="../../script/extern/jquery-3.6.4.js"></script>
-  <title>Librarium Catalogia</title>
-</head>
+<?php require_once 'autoload.php'; ?>
+<?php require_once 'layouts/header.php'; ?>
 <body>
   <section class="title bg-snow-3 fg-night-4" style="padding: 15px 0; border-bottom: 5px solid #D8DEE9;">
     <i class="fa fa-book-bookmark" style="display: block; margin: 0.83em; font-size: 30pt;"></i>
@@ -54,7 +30,7 @@ if (isset($_POST['submit'])) {
           <label for="sampul" class="form-label">Sampul</label>
           <input type="file" name="sampul" id="sampul">
           <div class="flex" style="margin: 30px 0; flex-direction: row; gap: 15px;">
-            <a class="menu-item bg-frost-3 fg-snow-3" href="index.php" id="btn-kembali">
+            <a class="menu-item bg-frost-3 fg-snow-3" href="crud.index.php" id="btn-kembali">
               <i class="fa fa-angle-left"></i>
               <span>Kembali</span>
             </a>
@@ -71,27 +47,25 @@ if (isset($_POST['submit'])) {
       </div>
     </div>
   </main>
-  <footer class="bg-night-0 fg-snow-1" style="position: relative;">
-    <div class="fg-snow-1">
-      <i class="fa-regular fa-copyright"></i>
-    </div>
-    <div class="fg-snow-1">
-      <span class="name">Rizqi Ghozali</span>
-    </div>
-    <div>
-      <span class="year bg-night-1 fg-snow-1">2023</span>
-    </div>
-  </footer>
-  <script src="../../script/data.js"></script>
-  <script src="../../script/main.js"></script>
+  <?php require_once 'layouts/footer.php'; ?>
+  <?php
+    require_once 'model/Books.php';
+    $books = new Books();
+    $state = null;
+    if (isset($_POST['submit'])) {
+      $state = $books->add($_POST);
+    }
+    if (!Session::check()) {
+      header('location:index.php');
+    }
+  ?>
   <script>
-    let state = <?= $state ?>;
+    let res = document.getElementsByTagName('footer')[0];
+    res.style.position = 'relative';
+    let state = '<?= $state ?>';
     if (state == 1) {
       alert('Proses tambah data buku berhasil!');
-      window.location.href = "index.php";
-    }
-    if (state == 0) {
-      alert('Proses tambah data buku gagal!');
+      window.location.href = "crud.index.php";
     }
   </script>
 </body>

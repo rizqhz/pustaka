@@ -49,6 +49,16 @@
     border-bottom: 5px solid #85b6c5;
 }
 
+#logout {
+    border-right: 5px solid #A85059;
+    border-bottom: 5px solid #A85059;
+}
+
+#logout:hover {
+    border-right: 5px solid #242933;
+    border-bottom: 5px solid #242933;
+}
+
 .search-field > form {
     display: flex;
 }

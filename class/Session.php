@@ -19,8 +19,10 @@ class Session {
     }
 
     public static function check() {
-        return isset($_SESSION['user']);
+        if (isset($_SESSION['user']))
+            return true;
     }
+    
 
     public static function getInfo() {
         if (self::check()) {
